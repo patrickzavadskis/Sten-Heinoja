@@ -1,0 +1,482 @@
+* {
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0;
+    margin: 0;
+    max-height: 100%;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+    transition: 100ms;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: black;
+    --white: white;
+    --red: #993333;
+    --blue: #333366;
+    --green: #336633;
+    --yellow: #999933;
+    --purple: #663399;
+    --padding: .75rem;
+    --margin: .75rem;
+    --regular: 400;
+    --bold: 700;
+    --h1: 3rem;
+    --p: 1.5rem;
+    --small-p: .75rem;
+    --black-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    --red-gradient: linear-gradient(180deg, rgba(153, 51, 51, 0), rgba(153, 51, 51, 1));
+    --blue-gradient: linear-gradient(180deg, rgba(51, 51, 102, 0), rgba(51, 51, 102, 1));
+    --green-gradient: linear-gradient(180deg, rgba(51, 102, 51, 0), rgba(51, 102, 51, 1));
+    --yellow-gradient: linear-gradient(180deg, rgba(153, 153, 51, 0), rgba(153, 153, 51, 1));
+    --purple-gradient: linear-gradient(180deg, rgba(102, 51, 153, 0), rgba(102, 51, 153, 1));
+}
+
+a {
+    color: var(--white);
+}
+
+a:hover {
+    font-weight: var(--bold);
+}
+
+body {
+    padding: var(--padding);
+    display: flex;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    width: 20%;
+}
+
+p {
+    font-size: var(--p);
+    color: var(--white);
+}
+
+h1 {
+    font-size: var(--h1);
+    color: var(--white);
+}
+
+section {
+    width: 40%;
+    padding: var(--padding);
+    height: calc(100vh - 1.5rem);
+    -webkit-animation: fadein 1s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 1s;
+    /* Internet Explorer */
+    -o-animation: fadein 1s;
+    /* Opera < 12.1 */
+    animation: fadein 1s;
+}
+
+#language {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+#logo {
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    font-size: var(--h1);
+    font-weight: var(--regular);
+}
+
+#logo:hover {
+    font-weight: 700;
+}
+
+#mobileLogo {
+    display: none;
+}
+
+#mobileNav {
+    overflow: hidden;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    flex-direction: column;
+    text-align: left;
+    padding: var(--padding);
+    z-index: 1;
+}
+
+#openIcon {
+    display: none;
+}
+
+#navbar {
+    flex-direction: column;
+    display: flex;
+}
+
+
+.concerts {
+    overflow: hidden;
+    width: 40%;
+}
+
+.concertslist {
+    overflow: scroll;
+}
+
+.concert {
+    display: flex;
+    padding: .75rem 1.5rem;
+}
+
+.concert:hover {
+    font-weight: var(--bold);
+}
+
+.concertsTime {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.date {
+    margin-right: 1.5rem;
+}
+
+.downloads {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    margin-top: auto;
+}
+
+.gradient {
+    position: absolute;
+    bottom: 0px;
+    width: 40%;
+    height: 15%;
+}
+
+.hideScroll {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.hideScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.image {
+    display: grid;
+    grid-template-rows: "img downloads";
+}
+
+.img {
+    display: flex;
+}
+
+.notSelectable {
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+.selectedLink {
+    font-weight: var(--bold);
+}
+
+.space {
+    display: none;
+}
+
+.text {
+    overflow: scroll;
+}
+
+.text p {
+    max-width: 720px;
+    width: auto;
+}
+
+.title {
+    padding: var(--padding);
+}
+
+.uppergradient {
+    position: absolute;
+    top: 5rem;
+    width: 40%;
+    height: 5%;
+}
+
+.videos {
+    overflow: scroll;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+        "nav text"
+        "image text"
+        ;
+    }
+    
+    nav {
+        grid-area: nav;
+        width: 100%;
+        height: auto;
+    }
+
+    .date {
+        font-size: var(--regular);
+    }
+
+    .description {
+        font-size: var(--regular);
+    }
+
+    .image {
+        grid-area: image;
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        grid-area: text;
+        width: 100%;
+    }
+
+    .videos {
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-gap: 0rem;
+    }
+
+    .concerts {
+        overflow: hidden;
+        width: 100%;
+    }   
+    
+    .gradient, .uppergradient {
+        width: 50%;
+        height: 5%;
+    }
+
+    #navbar, #language {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        padding: 0;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+    
+    nav {
+        display: flex;
+        background-color: var(--black);
+        z-index: 1;
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        margin-bottom: .75rem;
+    }
+
+    .concerts {
+        overflow: hidden;
+        width: auto;
+        height: auto;
+    }   
+    
+    .concert {
+        padding: 0 0 1.5rem 0;
+    }
+    
+    .concertsTime {
+        padding: 0;
+        margin: 0;
+    }
+
+    .date {
+        font-size: var(--regular);
+    }
+
+    .description {
+        font-size: var(--regular);
+    }
+
+    .gradient, .uppergradient {
+        width: auto;
+        height: auto;
+    }
+
+    .image {
+        width: auto;
+        height: auto;
+    }
+
+    .space {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 4.3rem;
+    }
+
+    .text {
+        width: auto;
+        height: auto;
+    }
+
+    .videos {
+        width: auto;
+        height: auto;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #mobileNav {
+        overflow: hidden;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: var(--black);
+        flex-direction: column;
+        text-align: left;
+        z-index: 1;
+        background-color: black;
+        position: fixed;
+    }
+
+    #mobileLogo {
+        display: flex;
+    }
+
+    #mobileNavLanguage {
+        display: flex;
+        padding-top: 1.5rem;
+        padding-left: .75rem;
+    }
+
+    .mobileNavHeader {
+        display: flex;
+        margin: .75rem;
+        justify-content: space-between;
+    }
+
+    #mobileNavLinks {
+        margin-top: 1.5rem;
+        margin-left: .75rem;
+    }
+
+    #navbar, #language {
+        display: none;
+    }
+
+    #openIcon {
+        display: flex;
+    }
+}

@@ -1,0 +1,7 @@
+body {
+    background-color: var(--black);
+}
+
+.gradient {
+    background-image: var(--black-gradient);
+}
